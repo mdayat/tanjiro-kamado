@@ -1,0 +1,258 @@
+/* Generic Styles */
+:root {
+  --water-color: #ff4d00;
+  --water-color: #2389da;
+  --text-color: #343536;
+  --font: "Source Sans 3";
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(72px + 52px);
+}
+body {
+  font-family: var(--font), sans-serif;
+  color: var(--text-color);
+}
+main > div {
+  margin-top: 52px;
+}
+h1,
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+p {
+  font-size: 16px;
+  line-height: 32px;
+  text-align: justify;
+}
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+}
+a {
+  text-decoration: none;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--water-color);
+  padding: 12px 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+#mobile-nav {
+  display: none;
+}
+#desktop-nav {
+  display: none;
+}
+#mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 32px;
+}
+#mobile-nav li {
+  width: 100%;
+  border-top: 2px solid white;
+}
+#mobile-nav li:last-child {
+  border-bottom: 2px solid white;
+}
+#mobile-nav a {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px;
+  color: white;
+}
+
+/* Main Styles */
+main {
+  margin: 0 32px;
+  padding-top: 72px;
+}
+article img {
+  width: 100%;
+  display: block;
+  margin-bottom: 24px;
+  object-fit: contain;
+  object-position: center;
+}
+aside img {
+  display: none;
+}
+#about h1 {
+  margin-bottom: 16px;
+}
+#breathing-style div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+#site-information {
+  margin-top: 52px;
+}
+#site-information h2 {
+  margin-bottom: 16px;
+}
+#site-information a {
+  color: var(--text-color);
+}
+#site-information a:hover {
+  text-decoration: underline;
+}
+#site-information a:visited {
+  color: purple;
+}
+#site-information strong {
+  font-weight: 700;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--water-color);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 52px;
+}
+
+footer a {
+  color: white;
+}
+
+@media only screen and (min-width: 720px) {
+  /* Generic Styles */
+  h1,
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 18px;
+  }
+
+  /* Header Style */
+  header {
+    padding: 12px 48px;
+  }
+  #mobile-nav {
+    font-size: 18px;
+  }
+
+  /* Main Style */
+  main {
+    margin: 0 48px;
+  }
+  article img {
+    width: 75%;
+    display: flex;
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #about h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  #breathing-style div {
+    margin-bottom: 24px;
+  }
+  #site-information h2 {
+    margin-bottom: 24px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Header Style */
+  header {
+    padding: 12px 64px;
+  }
+
+  header button {
+    display: none;
+  }
+
+  #desktop-nav {
+    display: block;
+  }
+
+  #desktop-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 32px;
+  }
+
+  #desktop-nav a {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+  }
+
+  /* Main Style */
+  main {
+    margin: 0 64px;
+  }
+
+  #about {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    place-items: center;
+  }
+
+  #breathing-style {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    place-items: center;
+  }
+
+  #breathing-style article {
+    order: 2;
+  }
+
+  #breathing-style aside {
+    order: 1;
+  }
+
+  article img {
+    display: none;
+  }
+
+  aside img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  aside img {
+    width: 75%;
+  }
+}
